@@ -3,6 +3,8 @@
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
+	g = log --graph --pretty=format:\"%C(yellow)%h %Creset%C(cyan)(%cr) %Creset%C(red)%C(bold)%d%Creset%C(green)%cn%Creset %s\"
+
 	# View the current working tree status using the short format
 	s = status -s
 
@@ -131,11 +133,6 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-
-[commit]
-
-	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
 
 [diff]
 
