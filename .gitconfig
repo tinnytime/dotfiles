@@ -113,7 +113,9 @@
 
 	# Convert line endings
 	# https://stackoverflow.com/questions/1889559/git-diff-to-ignore-m
-	autocrlf = true
+	autocrlf = false
+	eol = lf
+
 
 [color]
 
