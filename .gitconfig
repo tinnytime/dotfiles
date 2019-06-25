@@ -7,6 +7,8 @@
 
 	t = "for-each-ref --format='%(color:bold yellow)%(refname:short)%(color:reset) %(color:green)%(taggerdate:local)%(color:reset) %(subject) %(if)%(taggername)%(then)- %(color:dim black)%(taggername)%(color:reset)%(end)' --sort='-taggerdate' refs/tags"
 
+  showf = "!f() { git diff-tree --no-commit-id --name-only -r $1; }; f"
+
 	# View the current working tree status using the short format
 	s = status -sb
 
