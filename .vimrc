@@ -3,6 +3,9 @@
 " colorscheme solarized
 " let g:solarized_termtrans=1
 
+" Vim refresh rate in milliseconds
+set updatetime=750
+
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -107,6 +110,17 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+    " Strip white space
+    autocmd BufWritePre * call StripWhitespace()
 endif
 
 cmap w!! w !sudo tee % >/dev/null
+
+
+" Vim-gitgutter settings
+" turn off key mappings
+let g:gitgutter_map_keys = 0
+" Symbol colours
+highlight GitGutterAdd guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
