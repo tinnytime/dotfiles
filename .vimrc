@@ -47,10 +47,16 @@ syntax on
 " Highlight current line
 " set cursorline
 " Make tabs as wide as two spaces
-set tabstop=2
+set tabstop=4 shiftwidth=4 expandtab
+" Set max text width
+set tw=125
+" Auto indent
+set autoindent
 " Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+" eol:¬
+set lcs=tab:¦·,trail:·,nbsp:_
 set list
+set nowrap
 " Highlight searches
 set hlsearch
 " Ignore case of searches
